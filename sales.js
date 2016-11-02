@@ -1,5 +1,4 @@
 var runningTotal = 0.0;
-var preTax = document.cookie;
 
 function addItem()
 {
@@ -18,8 +17,8 @@ function addItem()
     dollars = asCurrency(runningTotal);
     document.getElementById("subtotal").innerHTML = dollars;
     document.getElementById("price").value = " ";
-    preTax = runningTotal;
-    setCookie(preTax);
+    //preTax = runningTotal;
+    setCookie("preTax",runningTotal,0);
   }
   // update newItem to its value cast as a number
   // update runningTotal to be its value plus newItem
